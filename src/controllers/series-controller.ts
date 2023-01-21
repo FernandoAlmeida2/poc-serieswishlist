@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { UpdateSeries } from "../protocols/series.js";
-import { NewSeries, Series } from "../protocols/series.js";
+import { NewSeries } from "../protocols/series.js";
 import seriesService from "../services/series-service.js";
 
 export async function getAllSeries(req: Request, res: Response): Promise<void> {
