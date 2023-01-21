@@ -5,7 +5,7 @@ CREATE TABLE series (
     name TEXT NOT NULL,
     platform TEXT NOT NULL,
     genre TEXT NOT NULL,
-    description TEXT NOT NULL,
+    review TEXT,
     status "typeStatus",
     rate INTEGER
 );

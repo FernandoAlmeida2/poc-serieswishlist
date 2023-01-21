@@ -8,5 +8,5 @@ export function errorHandlingMiddleware(
 ) {
   //if (error.type === "error_not_found") return res.status(404).send({ message: error.message });
   console.log(error);
-  return res.sendStatus(500);
+  res.sendStatus(500);
 }
