@@ -15,8 +15,23 @@ export type CountByGenreResult = {
   seriesCount: string;
 };
 
+async function countByPlatform(): Promise<QueryResult<CountByPlatformResult>> {
+  return connection.query(`
+  SELECT 
+    platform, COUNT(id) AS "seriesCount"
+  FROM series
+  GROUP BY platform
+  ORDER BY "seriesCount" DESC`);
+}
+
+export type CountByPlatformResult = {
+  platform: string;
+  seriesCount: string;
+};
+
 const rankingRepository = {
-    countByGenre
+  countByGenre,
+  countByPlatform
 };
 
 export default rankingRepository;
